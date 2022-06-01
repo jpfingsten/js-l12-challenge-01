@@ -10,8 +10,6 @@ const getImage = async function () {
     selectRandomImage(images);
 }
 
-// STEP 6 OF 7: REVEAL A RANDOM IMAGE
-
 const selectRandomImage = function (images) {
     const randomIndex = Math.floor(Math.random() * images.length);
     const randomImage = images[randomIndex]; // picking random element in an array
@@ -22,8 +20,8 @@ const selectRandomImage = function (images) {
 const displayImage = function (randomImage) {
     const author = randomImage.author;
     const imageAddress = randomImage.download_url;
-    authorSpan.innerText = author; //unsure
-    img.src = imageAddress; //unsure of syntax
+    authorSpan.innerText = author;
+    img.src = imageAddress;
     imgDiv.classList.remove("hide");
 }
 
